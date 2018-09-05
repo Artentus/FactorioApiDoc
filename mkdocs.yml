@@ -1,4 +1,26 @@
-site_name: Factorio API Documentation
+site_name: 'Factorio API Documentation'
+site_description: 'Unofficial documentation of the Factorio web APIs'
+site_url: 'https://artentus.github.io/FactorioApiDoc/'
+site_author: 'Mathis Rech'
+
+repo_name: 'Artentus/FactorioApiDoc'
+repo_url: 'https://github.com/Artentus/FactorioApiDoc'
+
 theme:
     name: 'material'
+    language: 'en'
     favicon: 'assets/images/favicon.ico'
+    logo: 'assets/images/logo.svg'
+
+markdown_extensions:
+    - toc:
+        permalink: "#"
+
+nav:
+    - Home: 'index.md'
+    - Authentication API:
+        - Overview: 'auth-api/index.md'
+    - Mod API:
+        - Overview: 'mod-api/index.md'
+    - Matchmaking API:
+        - Overview: 'matchmaking-api/index.md'
