@@ -1,1 +1,4 @@
 site_name: Factorio API Documentation
+theme:
+    name: 'material'
+    favicon: 'img/favicon.ico'
