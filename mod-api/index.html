@@ -96,6 +96,10 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
+      <a href="../#mod-api-overview" tabindex="1" class="md-skip">
+        Skip to content
+      </a>
+    
     
       <header class="md-header" data-md-component="header">
   <nav class="md-header-nav md-grid">
@@ -321,11 +325,97 @@
     
     <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
     
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Overview
+      </label>
     
     <a href="./" title="Overview" class="md-nav__link md-nav__link--active">
       Overview
     </a>
     
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#mods-endpoint" title="Mods Endpoint" class="md-nav__link">
+    Mods Endpoint
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#single-mod-endpoint" title="Single Mod Endpoint" class="md-nav__link">
+    Single Mod Endpoint
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="modlistpage/" title="ModListPage Object" class="md-nav__link">
+      ModListPage Object
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="pagination/" title="Pagination Object" class="md-nav__link">
+      Pagination Object
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="pagelinks/" title="PageLinks Object" class="md-nav__link">
+      PageLinks Object
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="modinfo/" title="ModInfo Object" class="md-nav__link">
+      ModInfo Object
+    </a>
   </li>
 
         
@@ -401,6 +491,44 @@
               </div>
             
             
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#mods-endpoint" title="Mods Endpoint" class="md-nav__link">
+    Mods Endpoint
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#single-mod-endpoint" title="Single Mod Endpoint" class="md-nav__link">
+    Single Mod Endpoint
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
           
           <div class="md-content">
             <article class="md-content__inner md-typeset">
@@ -409,9 +537,36 @@
                   <a href="https://github.com/Artentus/FactorioApiDoc/edit/master/docs/mod-api/index.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
                 
                 
-                  <h1>Overview</h1>
-                
-                
+                <h1 id="mod-api-overview">Mod API Overview<a class="headerlink" href="#mod-api-overview" title="Permanent link">#</a></h1>
+<p>The <code>Mod API</code> can be used to aquire various information about mods, as well as to download mods.
+To be able to download a mod, being <a href="../auth-api/#login-endpoint">logged in</a> is required and the
+logged in user must own a Factorio license.</p>
+<p>The domain to access the API is <code>https://mods.factorio.com/api</code>, all of the following paths are
+relative to this domain.</p>
+<h3 id="mods-endpoint">Mods Endpoint<a class="headerlink" href="#mods-endpoint" title="Permanent link">#</a></h3>
+<p>A complete list of available mods can be <code>GET</code>-requested from <code>/mods</code>.</p>
+<p>The following optional parameters can be specified when requesting the mod list:</p>
+<ul>
+<li>
+<p><strong><code>page_size</code></strong>, Type: <code>Integer</code><br />
+The number of mods on a single page. The default value is <code>25</code>.<br />
+Note that instead of a numeric value, the special keyword <code>max</code> is also allowed,
+which will cause the server to put all alvailable mods on one page.</p>
+</li>
+<li>
+<p><strong><code>page</code></strong>, Type: <code>Integer</code><br />
+The 1-based index of the page you want to request. The default value is <code>1</code>.</p>
+</li>
+</ul>
+<!--
+Is this still available? Getting no results when trying.
+
+* **`namelist`**, Type: `String[]`  
+A list of keywords to filter the results by.
+-->
+
+<p>The server will return a JSON object of type <a href="modlistpage/">ModListPage</a>.</p>
+<h3 id="single-mod-endpoint">Single Mod Endpoint<a class="headerlink" href="#single-mod-endpoint" title="Permanent link">#</a></h3>
                 
                   
                 
@@ -447,13 +602,13 @@
           </a>
         
         
-          <a href="../matchmaking-api/" title="Overview" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="modlistpage/" title="ModListPage Object" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                Overview
+                ModListPage Object
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">

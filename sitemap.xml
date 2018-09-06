@@ -21,6 +21,26 @@
      <changefreq>daily</changefreq>
     </url>
     <url>
+     <loc>https://artentus.github.io/FactorioApiDoc/mod-api/modlistpage/</loc>
+     <lastmod>2018-09-06</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://artentus.github.io/FactorioApiDoc/mod-api/pagination/</loc>
+     <lastmod>2018-09-06</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://artentus.github.io/FactorioApiDoc/mod-api/pagelinks/</loc>
+     <lastmod>2018-09-06</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://artentus.github.io/FactorioApiDoc/mod-api/modinfo/</loc>
+     <lastmod>2018-09-06</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
      <loc>https://artentus.github.io/FactorioApiDoc/matchmaking-api/</loc>
      <lastmod>2018-09-06</lastmod>
      <changefreq>daily</changefreq>
