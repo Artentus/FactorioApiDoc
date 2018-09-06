@@ -20,6 +20,7 @@ nav:
     - Home: 'index.md'
     - Authentication API:
         - Overview: 'auth-api/index.md'
+        - AuthenticationResult Object: 'auth-api/authresult.md'
     - Mod API:
         - Overview: 'mod-api/index.md'
     - Matchmaking API:

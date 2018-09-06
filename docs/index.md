@@ -7,8 +7,8 @@ This is a community project with the goal to make the not officially documented 
 accessible for developers of 3rd party software.
 
 Due to the nature of the project the information on here may not be complete or up-to-date.
-If you are a developer yourself and see a mistake feel free to contribute over at
-[GitHub](https://github.com/Artentus/FactorioApiDoc).
+If you are a developer yourself and see a mistake or something missing feel free to contribute
+over at [GitHub](https://github.com/Artentus/FactorioApiDoc).
 
 ### APIs
 
