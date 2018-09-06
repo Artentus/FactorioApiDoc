@@ -1,13 +1,15 @@
-# Server Description Object
+# ServerDescription JSON Object
 
-Depending on the type of request you made, the result may have different information.
+### Attributes
+
+Depending on the type of request you made, the result may contain different attributes.
 
 | Key                 | Type                                        | Description                                           | /get-games | /get-game-details |
 |:--------------------|:--------------------------------------------|:------------------------------------------------------|:-----------|:------------------|
 | game_id             | Interger                                    | A unique identifier of this game                      | ✓          | ✓                 |
 | name                | String                                      | The name of this game                                 | ✓          | ✓                 |
 | max_players         | Integer                                     | The maximum allowed amount of players on this server  | ✓          | ✓                 |
-| application_version | [ApplicationVersionObject](./appversion.md) | An object with information about the server           | ✓          | ✓                 |
+| application_version | [ApplicationVersion](./appversion.md) | An object with information about the server           | ✓          | ✓                 |
 | game_time_elapsed   | String                                      | The time that has passed since the game started       | ✓          | ✓                 |
 | has_password        | Boolean                                     | Whether the server has a password or not              | ✓          | ✓                 |
 | server_id           | String                                      | A unique identifier for the server                    | ✓          | ✓                 |

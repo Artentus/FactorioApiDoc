@@ -1,15 +1,19 @@
-# Application Version Object
+# ApplicationVersion JSON Object
 
-This is an object that provides information about the system the game is running on, as well as information about the version of the game.
+An object providing information about the platform the game is running on, as well as information about the version of the game.
 
-* `build_mode`, Type: String  
-The build type of the game. `headless`, `alpha` or `steam`.
+### Attributes
 
-* `build_version`, Type: Integer
-The version of the build of the game being used.
+* `build_mode`, Type: `String`  
+The build version of the server.  
+Possible values are `headless`, `alpha` and `steam`.
 
-* `game_version`, Type: String
+* `build_version`, Type: `Integer`  
+The build number of the server.
+
+* `game_version`, Type: `String`  
 The version of the game used on the server.
 
-* `platform`, Type: String
-The platform the server is running on.
+* `platform`, Type: `String`  
+The platform the server is running on.  
+Usual values are `win64` and `linux64`.

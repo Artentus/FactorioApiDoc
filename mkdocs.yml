@@ -25,3 +25,5 @@ nav:
         - Overview: 'mod-api/index.md'
     - Matchmaking API:
         - Overview: 'matchmaking-api/index.md'
+        - ServerDescription Object: 'matchmaking-api/serverdescription.md'
+        - ApplicationVersion Object: 'matchmaking-api/appversion.md'
