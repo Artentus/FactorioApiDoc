@@ -7,7 +7,7 @@ The domain to access the API is `https://auth.factorio.com`, all of the followin
 
 ### Login Endpoint
 
-To log in, a HTTP POST request hast to be sent to `/api-login`.
+To log in, a HTTP POST request has to be sent to `/api-login`.
 
 The following parameters have to be sent in `application/x-www-form-urlencoded` form:
 
