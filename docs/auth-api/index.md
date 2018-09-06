@@ -11,21 +11,21 @@ To log in, a HTTP POST request has to be sent to `/api-login`.
 
 The following parameters have to be sent in `application/x-www-form-urlencoded` form:
 
-* `username`, Type: `String`  
+* **`username`**, Type: `String`  
 The name of the user to be logged in.  
 Instead of the name, the e-mail can also be used.
 However, note that this is actually the only place where the e-mail is a valid replacement for the name.
 
-* `password`, Type: `String`  
+* **`password`**, Type: `String`  
 The users password.
 
 In addition, the following parameters are optional:
 
-* `require_game_ownership`, Type: `Boolean`  
+* **`require_game_ownership`**, Type: `Boolean`  
 The default value when not specified is `False`.  
 If `True` is specified, the request will only succeed if the user has bought a Factorio license (required to download mods).
 
-* `api_version`, Type: `Integer`  
+* **`api_version`**, Type: `Integer`  
 The version of the API to use.  
 At the time of writing this the most recent version is `2`, which is also the default value when not specified.
 

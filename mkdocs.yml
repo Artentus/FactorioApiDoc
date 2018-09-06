@@ -23,6 +23,10 @@ nav:
         - AuthenticationResult Object: 'auth-api/authresult.md'
     - Mod API:
         - Overview: 'mod-api/index.md'
+        - ModListPage Object: 'mod-api/modlistpage.md'
+        - Pagination Object: 'mod-api/pagination.md'
+        - PageLinks Object: 'mod-api/pagelinks.md'
+        - ModInfo Object: 'mod-api/modinfo.md'
     - Matchmaking API:
         - Overview: 'matchmaking-api/index.md'
         - ServerDescription Object: 'matchmaking-api/serverdescription.md'

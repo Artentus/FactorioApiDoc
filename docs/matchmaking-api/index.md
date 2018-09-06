@@ -12,11 +12,11 @@ The domain to access the API is `https://multiplayer.factorio.com`, all of the f
 To get a list of servers one can join, a GET request must be sent to `/get-games`.  
 The following parameters have to be sent:
 
-* `username`, Type: `String`  
+* **`username`**, Type: `String`  
 The name of the user to be logged in.  
 Note that the e-mail can not be used here.
 
-* `token`, Type: `128 bit Integer`  
+* **`token`**, Type: `128 bit Integer`  
 The token that can be acquired using the [Authentication API](../auth-api/index.md).  
 Alternatively, you can get the token from a file called `player-data.json`, located in the user data folder of the game, provided you are logged in inside the game.
 

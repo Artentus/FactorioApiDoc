@@ -4,16 +4,16 @@ An object providing information about the platform the game is running on, as we
 
 ### Attributes
 
-* `build_mode`, Type: `String`  
+* **`build_mode`**, Type: `String`  
 The build version of the server.  
 Possible values are `headless`, `alpha` and `steam`.
 
-* `build_version`, Type: `Integer`  
+* **`build_version`**, Type: `Integer`  
 The build number of the server.
 
-* `game_version`, Type: `String`  
+* **`game_version`**, Type: `String`  
 The version of the game used on the server.
 
-* `platform`, Type: `String`  
+* **`platform`**, Type: `String`  
 The platform the server is running on.  
-Usual values are `win64` and `linux64`.
+Common values are `win64` and `linux64`.
