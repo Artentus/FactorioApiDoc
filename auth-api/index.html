@@ -96,6 +96,10 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
+      <a href="../#authentication-api-overview" tabindex="1" class="md-skip">
+        Skip to content
+      </a>
+    
     
       <header class="md-header" data-md-component="header">
   <nav class="md-header-nav md-grid">
@@ -273,11 +277,54 @@
     
     <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
     
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Overview
+      </label>
     
     <a href="./" title="Overview" class="md-nav__link md-nav__link--active">
       Overview
     </a>
     
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#login-endpoint" title="Login Endpoint" class="md-nav__link">
+    Login Endpoint
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="authresult/" title="AuthenticationResult Object" class="md-nav__link">
+      AuthenticationResult Object
+    </a>
   </li>
 
         
@@ -365,6 +412,37 @@
               </div>
             
             
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#login-endpoint" title="Login Endpoint" class="md-nav__link">
+    Login Endpoint
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
           
           <div class="md-content">
             <article class="md-content__inner md-typeset">
@@ -373,9 +451,44 @@
                   <a href="https://github.com/Artentus/FactorioApiDoc/edit/master/docs/auth-api/index.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
                 
                 
-                  <h1>Overview</h1>
-                
-                
+                <h1 id="authentication-api-overview">Authentication API Overview<a class="headerlink" href="#authentication-api-overview" title="Permanent link">#</a></h1>
+<p>The Authentication API is used to log in on the official Factorio servers.<br />
+Being logged in is required to download mods and to access the <a href="../matchmaking-api/">Matchmaking API</a>.</p>
+<p>The domain to access the API is <code>https://auth.factorio.com</code>, all of the following paths are relative to this domain.</p>
+<h3 id="login-endpoint">Login Endpoint<a class="headerlink" href="#login-endpoint" title="Permanent link">#</a></h3>
+<p>To log in, a HTTP POST request hast to be sent to <code>/api-login</code>.</p>
+<p>The following parameters have to be sent in <code>application/x-www-form-urlencoded</code> form:</p>
+<ul>
+<li>
+<p><code>username</code>, Type: <code>String</code><br />
+The name of the user to be logged in.<br />
+Instead of the name, the e-mail can also be used.
+However, note that this is actually the only place where the e-mail is a valid replacement for the name.</p>
+</li>
+<li>
+<p><code>password</code>, Type: <code>String</code><br />
+The users password.</p>
+</li>
+</ul>
+<p>In addition, the following parameters are optional:</p>
+<ul>
+<li>
+<p><code>require_game_ownership</code>, Type: <code>Boolean</code><br />
+The default value when not specified is <code>False</code>.<br />
+If <code>True</code> is specified, the request will only succeed if the user has bought a Factorio license (required to download mods).</p>
+</li>
+<li>
+<p><code>api_version</code>, Type: <code>Integer</code><br />
+The version of the API to use.<br />
+At the time of writing this the most recent version is <code>2</code>, which is also the default value when not specified.</p>
+</li>
+</ul>
+<p>As an example, a complete request string could look like this:</p>
+<pre><code>username=FactorioPlayer&amp;password=SuperSecretPassword&amp;require_game_ownership=true&amp;api_version=2
+</code></pre>
+
+<p>If the credentials were invalid or <code>require_game_ownership=true</code> is specified and the account does not own a Factorio license, a code <code>401</code> is returned.<br />
+If the login was successful, a code <code>200</code> is returned with an <a href="authresult/">AuthenticationResult</a> JSON object as response.</p>
                 
                   
                 
@@ -411,13 +524,13 @@
           </a>
         
         
-          <a href="../mod-api/" title="Overview" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="authresult/" title="AuthenticationResult Object" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                Overview
+                AuthenticationResult Object
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">
