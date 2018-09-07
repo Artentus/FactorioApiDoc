@@ -28,6 +28,11 @@ Is this still available? Getting no results when trying.
 A list of keywords to filter the results by.
 -->
 
+A complete request URL could look like this:  
+```
+https://mods.factorio.com/api/mods?page_size=100&page=5
+```
+
 The server will return a JSON object of type [ModListPage](modlistpage.md).
 
 ### Single Mod Endpoint

@@ -22,3 +22,6 @@ Used to get information about and download mods.
 
 * [Matchmaking API](matchmaking-api/index.md)  
 Used to find public game servers.
+
+* [Update API](update-api/index.md)  
+Used to download Factorio update packages.
