@@ -45,6 +45,31 @@ The server will return a JSON object of type [ModListPage](modlistpage.md).
 
 ### Single Mod Endpoint
  
-To get more information about a mod, a `GET` request has to be sent to `/mods/{mod-name}` or `/mods/{mod-name}/full`.
+To get more information about a mod, a `GET` request has to be sent to `/mods/{mod-name}` or `/mods/{mod-name}/full`.  
+For example:  
+```
+https://mods.factorio.com/api/mods/rso-mod/full
+```
 
 The server will return a JSON object of type [ModInfo](modinfo.md).
+
+### Mod Download Endpoint
+
+A mod release can be downloaded by combining the base url with the `download_url` attribute
+[specified by the release](modrelease.md) and sending a `GET` request to the resulting url.  
+To be able to download a mod, being [authenticated](../auth-api) is required, and the account needs to own a Factorio license.
+
+The following parameters must be specified:
+
+* **`username`**, Type: `String`  
+The name of the user to be logged in.
+
+* **`token`**, Type: `128 bit Integer`  
+The users login token, as aquired by authenticating earlier or found in the `player-data.json`file.
+
+A complete download url might look like this:  
+```
+https://mods.factorio.com/download/rso-mod/5a5f1ae6adcc441024d73a0d?username=FactorioPlayer&token=152ae3e4c0ae57525c5d0c223b1b507d 
+```
+
+When successful, the server will send back the requested mod file.

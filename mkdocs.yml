@@ -27,9 +27,10 @@ nav:
         - Pagination Object: 'mod-api/pagination.md'
         - PageLinks Object: 'mod-api/pagelinks.md'
         - ModInfo Object: 'mod-api/modinfo.md'
-        - ModRelease Object: 'mod-api/modrelease'
-        - License Object: 'mod-api/license'
-        - Tag Object: 'mod-api/tag'
+        - ModRelease Object: 'mod-api/modrelease.md'
+        - InfoFile Object: 'mod-api/infofile.md'
+        - License Object: 'mod-api/license.md'
+        - Tag Object: 'mod-api/tag.md'
     - Matchmaking API:
         - Overview: 'matchmaking-api/index.md'
         - ServerDescription Object: 'matchmaking-api/serverdescription.md'
