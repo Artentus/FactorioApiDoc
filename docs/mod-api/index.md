@@ -26,6 +26,14 @@ Is this still available? Getting no results when trying.
 
 * **`namelist`**, Type: `String[]`  
 A list of keywords to filter the results by.
+
+Kind of, try this: https://mods.factorio.com/api/mods?namelist=boblibrary.
+It seems very similar to https://mods.factorio.com/api/mods/boblibrary.
+I haven't figured out how to send an array though...
+This doesn't really work:
+https://mods.factorio.com/api/mods?namelist=boblibrary,boblogistics
+
+I don't really see the point if you can't send an array honestly...
 -->
 
 A complete request URL could look like this:  
@@ -36,3 +44,7 @@ https://mods.factorio.com/api/mods?page_size=100&page=5
 The server will return a JSON object of type [ModListPage](modlistpage.md).
 
 ### Single Mod Endpoint
+ 
+To get more information about a mod, a `GET` request has to be sent to `/mods/{mod-name}` or `/mods/{mod-name}/full`.
+
+The server will return a JSON object of type [ModInfo](modinfo.md).
