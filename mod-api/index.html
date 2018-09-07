@@ -360,6 +360,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#mod-download-endpoint" title="Mod Download Endpoint" class="md-nav__link">
+    Mod Download Endpoint
+  </a>
+  
+</li>
+      
       
       
       
@@ -415,6 +422,54 @@
   <li class="md-nav__item">
     <a href="modinfo/" title="ModInfo Object" class="md-nav__link">
       ModInfo Object
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="modrelease/" title="ModRelease Object" class="md-nav__link">
+      ModRelease Object
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="infofile/" title="InfoFile Object" class="md-nav__link">
+      InfoFile Object
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="license/" title="License Object" class="md-nav__link">
+      License Object
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="tag/" title="Tag Object" class="md-nav__link">
+      Tag Object
     </a>
   </li>
 
@@ -484,6 +539,42 @@
   </li>
 
     
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
+    
+    <label class="md-nav__link" for="nav-5">
+      Update API
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-5">
+        Update API
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../update-api/" title="Overview" class="md-nav__link">
+      Overview
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
   </ul>
 </nav>
                   </div>
@@ -514,6 +605,13 @@
         <li class="md-nav__item">
   <a href="#single-mod-endpoint" title="Single Mod Endpoint" class="md-nav__link">
     Single Mod Endpoint
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mod-download-endpoint" title="Mod Download Endpoint" class="md-nav__link">
+    Mod Download Endpoint
   </a>
   
 </li>
@@ -563,10 +661,48 @@ Is this still available? Getting no results when trying.
 
 * **`namelist`**, Type: `String[]`  
 A list of keywords to filter the results by.
+
+Kind of, try this: https://mods.factorio.com/api/mods?namelist=boblibrary.
+It seems very similar to https://mods.factorio.com/api/mods/boblibrary.
+I haven't figured out how to send an array though...
+This doesn't really work:
+https://mods.factorio.com/api/mods?namelist=boblibrary,boblogistics
+
+I don't really see the point if you can't send an array honestly...
 -->
+
+<p>A complete request URL could look like this:  </p>
+<pre><code>https://mods.factorio.com/api/mods?page_size=100&amp;page=5
+</code></pre>
 
 <p>The server will return a JSON object of type <a href="modlistpage/">ModListPage</a>.</p>
 <h3 id="single-mod-endpoint">Single Mod Endpoint<a class="headerlink" href="#single-mod-endpoint" title="Permanent link">#</a></h3>
+<p>To get more information about a mod, a <code>GET</code> request has to be sent to <code>/mods/{mod-name}</code> or <code>/mods/{mod-name}/full</code>.<br />
+For example:  </p>
+<pre><code>https://mods.factorio.com/api/mods/rso-mod/full
+</code></pre>
+
+<p>The server will return a JSON object of type <a href="modinfo/">ModInfo</a>.</p>
+<h3 id="mod-download-endpoint">Mod Download Endpoint<a class="headerlink" href="#mod-download-endpoint" title="Permanent link">#</a></h3>
+<p>A mod release can be downloaded by combining the base url with the <code>download_url</code> attribute
+<a href="modrelease/">specified by the release</a> and sending a <code>GET</code> request to the resulting url.<br />
+To be able to download a mod, being <a href="../auth-api">authenticated</a> is required, and the account needs to own a Factorio license.</p>
+<p>The following parameters must be specified:</p>
+<ul>
+<li>
+<p><strong><code>username</code></strong>, Type: <code>String</code><br />
+The name of the user to be logged in.</p>
+</li>
+<li>
+<p><strong><code>token</code></strong>, Type: <code>128 bit Integer</code><br />
+The users login token, as aquired by authenticating earlier or found in the <code>player-data.json</code>file.</p>
+</li>
+</ul>
+<p>A complete download url might look like this:  </p>
+<pre><code>https://mods.factorio.com/download/rso-mod/5a5f1ae6adcc441024d73a0d?username=FactorioPlayer&amp;token=152ae3e4c0ae57525c5d0c223b1b507d 
+</code></pre>
+
+<p>When successful, the server will send back the requested mod file.</p>
                 
                   
                 

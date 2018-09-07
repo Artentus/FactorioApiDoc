@@ -412,6 +412,54 @@
   </li>
 
         
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../modrelease/" title="ModRelease Object" class="md-nav__link">
+      ModRelease Object
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../infofile/" title="InfoFile Object" class="md-nav__link">
+      InfoFile Object
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../license/" title="License Object" class="md-nav__link">
+      License Object
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../tag/" title="Tag Object" class="md-nav__link">
+      Tag Object
+    </a>
+  </li>
+
+        
       </ul>
     </nav>
   </li>
@@ -468,6 +516,42 @@
   <li class="md-nav__item">
     <a href="../../matchmaking-api/appversion/" title="ApplicationVersion Object" class="md-nav__link">
       ApplicationVersion Object
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
+    
+    <label class="md-nav__link" for="nav-5">
+      Update API
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-5">
+        Update API
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../update-api/" title="Overview" class="md-nav__link">
+      Overview
     </a>
   </li>
 
@@ -542,11 +626,131 @@ or in a list by <a href="../#mods-endpoint">requesting a list of mods</a>.</p>
 </thead>
 <tbody>
 <tr>
+<td align="left">name</td>
+<td align="left">String</td>
+<td align="left">Unique name of the mod</td>
+<td align="left">✓</td>
+<td align="left">✓</td>
+<td align="left">✓</td>
+</tr>
+<tr>
+<td align="left">title</td>
+<td align="left">String</td>
+<td align="left">Friendly name of the mod</td>
+<td align="left">✓</td>
+<td align="left">✓</td>
+<td align="left">✓</td>
+</tr>
+<tr>
+<td align="left">owner</td>
+<td align="left">String</td>
+<td align="left">Author of the mod</td>
+<td align="left">✓</td>
+<td align="left">✓</td>
+<td align="left">✓</td>
+</tr>
+<tr>
+<td align="left">summary</td>
+<td align="left">String</td>
+<td align="left">A short summary of the mod</td>
+<td align="left">✓</td>
+<td align="left">✓</td>
+<td align="left">✓</td>
+</tr>
+<tr>
+<td align="left">downloads_count</td>
+<td align="left">Integer</td>
+<td align="left">The number of times this mod has been downloaded</td>
+<td align="left">✓</td>
+<td align="left">✓</td>
+<td align="left">✓</td>
+</tr>
+<tr>
+<td align="left">latest_release</td>
+<td align="left"><a href="../modrelease">ModRelease</a></td>
+<td align="left">Latest release of the mod</td>
+<td align="left">✓</td>
 <td align="left"></td>
 <td align="left"></td>
+</tr>
+<tr>
+<td align="left">releases</td>
+<td align="left"><a href="../modrelease">ModRelease[]</a></td>
+<td align="left">An array of releases of the mod</td>
 <td align="left"></td>
 <td align="left">✓</td>
 <td align="left">✓</td>
+</tr>
+<tr>
+<td align="left">changelog</td>
+<td align="left">String</td>
+<td align="left">Changelog of the mod, formatted in <a href="https://en.wikipedia.org/wiki/Markdown">Markdown</a></td>
+<td align="left"></td>
+<td align="left"></td>
+<td align="left">✓</td>
+</tr>
+<tr>
+<td align="left">created_at</td>
+<td align="left">String</td>
+<td align="left">Creation date of the mod, formatted in <a href="https://en.wikipedia.org/wiki/ISO_8601">ISO 8601</a></td>
+<td align="left"></td>
+<td align="left"></td>
+<td align="left">✓</td>
+</tr>
+<tr>
+<td align="left">description</td>
+<td align="left">String</td>
+<td align="left">A long description of the mod, formatted in <a href="https://en.wikipedia.org/wiki/Markdown">Markdown</a></td>
+<td align="left"></td>
+<td align="left"></td>
+<td align="left">✓</td>
+</tr>
+<tr>
+<td align="left">faq</td>
+<td align="left">String</td>
+<td align="left">Optional FAQ of the mod, formatted in <a href="https://en.wikipedia.org/wiki/Markdown">Markdown</a></td>
+<td align="left"></td>
+<td align="left"></td>
+<td align="left">✓</td>
+</tr>
+<tr>
+<td align="left">github_path</td>
+<td align="left">String</td>
+<td align="left">Path to the GitHub repository, relative to https://github.com/</td>
+<td align="left"></td>
+<td align="left"></td>
+<td align="left">✓</td>
+</tr>
+<tr>
+<td align="left">homepage</td>
+<td align="left">String</td>
+<td align="left">URL of the homepage of the mod</td>
+<td align="left"></td>
+<td align="left"></td>
+<td align="left">✓</td>
+</tr>
+<tr>
+<td align="left">license</td>
+<td align="left"><a href="../license">Licence</a></td>
+<td align="left">License of the mod</td>
+<td align="left"></td>
+<td align="left"></td>
+<td align="left">✓</td>
+</tr>
+<tr>
+<td align="left">tag</td>
+<td align="left"><a href="../tag">Tag</a></td>
+<td align="left">Tag of the mod</td>
+<td align="left"></td>
+<td align="left"></td>
+<td align="left">✓</td>
+</tr>
+<tr>
+<td align="left">updated_at</td>
+<td align="left">String</td>
+<td align="left">Last update date of the mod, formatted in <a href="https://en.wikipedia.org/wiki/ISO_8601">ISO 8601</a></td>
+<td align="left"></td>
+<td align="left"></td>
 <td align="left">✓</td>
 </tr>
 </tbody>
@@ -586,13 +790,13 @@ or in a list by <a href="../#mods-endpoint">requesting a list of mods</a>.</p>
           </a>
         
         
-          <a href="../../matchmaking-api/" title="Overview" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../modrelease/" title="ModRelease Object" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                Overview
+                ModRelease Object
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">
