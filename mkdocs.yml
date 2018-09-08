@@ -37,3 +37,5 @@ nav:
         - ApplicationVersion Object: 'matchmaking-api/appversion.md'
     - Update API:
         - Overview: 'update-api/index.md'
+        - PackageList Object: 'update-api/packagelist.md'
+        - Package object: 'update-api/package.md'

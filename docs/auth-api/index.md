@@ -1,7 +1,8 @@
 # Authentication API Overview
 
 The Authentication API is used to log in on the official Factorio servers.  
-Being logged in is required to download mods and to access the [Matchmaking API](../matchmaking-api/index.md).
+Being logged in is required to download mods as well as to access the
+[Matchmaking API](../matchmaking-api/index.md) and the [Update API](../update-api/index.md).
 
 The domain to access the API is `https://auth.factorio.com`, all of the following paths are relative to this domain.
 

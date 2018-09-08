@@ -1,6 +1,6 @@
 # Mod API Overview
 
-The `Mod API` can be used to aquire various information about mods, as well as to download mods.
+The Mod API can be used to aquire various information about mods, as well as to download mods.
 To be able to download a mod, being [logged in](../auth-api/#login-endpoint) is required and the
 logged in user must own a Factorio license.
 
@@ -65,7 +65,7 @@ The following parameters must be specified:
 The name of the user to be logged in.
 
 * **`token`**, Type: `128 bit Integer`  
-The users login token, as aquired by authenticating earlier or found in the `player-data.json`file.
+The users login token, as aquired by authenticating earlier or found in the `player-data.json` file.
 
 A complete download url might look like this:  
 ```
