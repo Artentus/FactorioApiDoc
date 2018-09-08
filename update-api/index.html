@@ -96,6 +96,10 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
+      <a href="../#update-api-overview" tabindex="1" class="md-skip">
+        Skip to content
+      </a>
+    
     
       <header class="md-header" data-md-component="header">
   <nav class="md-header-nav md-grid">
@@ -513,11 +517,80 @@
     
     <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
     
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Overview
+      </label>
     
     <a href="./" title="Overview" class="md-nav__link md-nav__link--active">
       Overview
     </a>
     
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#available-versions-endpoint" title="Available Versions Endpoint" class="md-nav__link">
+    Available Versions Endpoint
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#download-endpoint" title="Download Endpoint" class="md-nav__link">
+    Download Endpoint
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#applying-an-update-package" title="Applying an Update Package" class="md-nav__link">
+    Applying an Update Package
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="packagelist/" title="PackageList Object" class="md-nav__link">
+      PackageList Object
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="package/" title="Package object" class="md-nav__link">
+      Package object
+    </a>
   </li>
 
         
@@ -533,6 +606,51 @@
               </div>
             
             
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#available-versions-endpoint" title="Available Versions Endpoint" class="md-nav__link">
+    Available Versions Endpoint
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#download-endpoint" title="Download Endpoint" class="md-nav__link">
+    Download Endpoint
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#applying-an-update-package" title="Applying an Update Package" class="md-nav__link">
+    Applying an Update Package
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
           
           <div class="md-content">
             <article class="md-content__inner md-typeset">
@@ -541,9 +659,79 @@
                   <a href="https://github.com/Artentus/FactorioApiDoc/edit/master/docs/update-api/index.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
                 
                 
-                  <h1>Overview</h1>
-                
-                
+                <h1 id="update-api-overview">Update API Overview<a class="headerlink" href="#update-api-overview" title="Permanent link">#</a></h1>
+<p>The Update API can be used to manually download Factorio update packages that can then later be applied to a Factorio client or server.<br />
+To access this API, <a href="../auth-api/">authentication</a> is required.</p>
+<p>The domain to access the API is <code>https://updater.factorio.com</code>, all of the following paths are relative to this domain.</p>
+<h3 id="available-versions-endpoint">Available Versions Endpoint<a class="headerlink" href="#available-versions-endpoint" title="Permanent link">#</a></h3>
+<p>To get a complete list of available packages you one can send a <code>GET</code> request to this endpoint located at <code>/get-available-version</code>.</p>
+<p>The following parameters must be specified:</p>
+<ul>
+<li>
+<p><strong><code>username</code></strong>, Type: <code>String</code><br />
+The name of the user to be logged in.</p>
+</li>
+<li>
+<p><strong><code>token</code></strong>, Type: <code>128 bit Integer</code><br />
+The users login token, as aquired by authenticating earlier or found in the <code>player-data.json</code> file.</p>
+</li>
+</ul>
+<p>The following optional parameters can be specified:</p>
+<ul>
+<li><strong><code>api_version</code></strong>, Type: <code>Integer</code><br />
+The version of the API to use.<br />
+At the time of writing this the most recent version is <code>2</code>, which is also the default value when not specified.</li>
+</ul>
+<p>If the request was successful, the server will return a JSON object of type <a href="packagelist/">PackageList</a>.</p>
+<h3 id="download-endpoint">Download Endpoint<a class="headerlink" href="#download-endpoint" title="Permanent link">#</a></h3>
+<p>To download an update package, the download enpoint at <code>/get-download-link</code> can be used.</p>
+<p>The following parameters must be specified:</p>
+<ul>
+<li>
+<p><strong><code>username</code></strong>, Type: <code>String</code><br />
+The name of the user to be logged in.</p>
+</li>
+<li>
+<p><strong><code>token</code></strong>, Type: <code>128 bit Integer</code><br />
+The users login token, as aquired by authenticating earlier or found in the <code>player-data.json</code> file.</p>
+</li>
+<li>
+<p><strong><code>package</code></strong>, Type: <code>String</code><br />
+One of the following strings, depending on which platform you are running Factorio on:<br />
+<code>core-linux64</code>, <code>core-linux_headless64</code>, <code>core-mac</code>, <code>core-win64</code>, <code>core-linux32</code>, <code>core-win32</code></p>
+</li>
+<li>
+<p><strong><code>from</code></strong>, Type: <code>Version</code><br />
+The version of Factorio to be updated.</p>
+</li>
+<li>
+<p><strong><code>to</code></strong>, Type: <code>Version</code><br />
+The target version you want to update to.</p>
+</li>
+</ul>
+<p><strong>Note:</strong> Only such combinations of <code>from</code> and <code>to</code>are allowed that can be found in a <a href="package/"><code>Package</code></a>
+object in the <a href="packagelist/">list</a> corresponding to the <code>package</code> parameter.</p>
+<p>The following optional parameters can also be specified:</p>
+<ul>
+<li><strong><code>api_version</code></strong>, Type: <code>Integer</code><br />
+The version of the API to use.<br />
+At the time of writing this the most recent version is <code>2</code>, which is also the default value when not specified.</li>
+</ul>
+<p>This is an example of a valid request url:</p>
+<pre><code>https://updater.factorio.com/get-download-link?username=FactorioPlayer&amp;token=152ae3e4c0ae57525c5d0c223b1b507d&amp;package=core-win64&amp;from=0.16.50&amp;to=0.16.51
+</code></pre>
+
+<p>If the request was successful, the server will return a JSON <code>String</code>-array with a single entry, that being the download link.<br />
+Example of a result:  </p>
+<pre><code>[&quot;https://eu3.factorio.com/updates/core-win64-0.16.50-0.16.51-update.zip?key=bvCb85QwBzUgzwEIliKw7Q&amp;expires=1533955174&quot;]
+</code></pre>
+
+<p>The generated link is only valid for a limited amount of time.</p>
+<h3 id="applying-an-update-package">Applying an Update Package<a class="headerlink" href="#applying-an-update-package" title="Permanent link">#</a></h3>
+<p>A downloaded update package can be applied by starting Factorio with the <code>--apply-update &lt;package&gt;</code> arguments.</p>
+<p>On Windows this could for example look like this:  </p>
+<pre><code>factorio.exe --apply-update core-win64-0.16.50-0.16.51-update.zip
+</code></pre>
                 
                   
                 
@@ -578,6 +766,20 @@
             </div>
           </a>
         
+        
+          <a href="packagelist/" title="PackageList Object" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                PackageList Object
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
         
       </nav>
     </div>
