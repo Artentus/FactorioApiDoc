@@ -7,15 +7,7 @@ The domain to access the API is `https://updater.factorio.com`, all of the follo
 
 ### Available Versions Endpoint
 
-To get a complete list of available packages you one can send a `GET` request to this endpoint located at `/get-available-versions`.
-
-The following parameters must be specified:
-
-* **`username`**, Type: `String`  
-The name of the user to be logged in.
-
-* **`token`**, Type: `128 bit Integer`  
-The users login token, as aquired by authenticating earlier or found in the `player-data.json` file.
+To get a complete list of available packages you one can send a `GET` request to this endpoint located at `/get-available-version`.
 
 The following optional parameters can be specified:
 
