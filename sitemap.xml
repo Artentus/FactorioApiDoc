@@ -1,93 +1,93 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
-     <loc>https://artentus.github.io/FactorioApiDoc/</loc>
-     <lastmod>2018-09-08</lastmod>
-     <changefreq>daily</changefreq>
+         <loc>https://artentus.github.io/FactorioApiDoc/</loc>
+         <lastmod>2022-11-30</lastmod>
+         <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>https://artentus.github.io/FactorioApiDoc/auth-api/</loc>
-     <lastmod>2018-09-08</lastmod>
-     <changefreq>daily</changefreq>
+         <loc>https://artentus.github.io/FactorioApiDoc/auth-api/</loc>
+         <lastmod>2022-11-30</lastmod>
+         <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>https://artentus.github.io/FactorioApiDoc/auth-api/authresult/</loc>
-     <lastmod>2018-09-08</lastmod>
-     <changefreq>daily</changefreq>
+         <loc>https://artentus.github.io/FactorioApiDoc/auth-api/authresult/</loc>
+         <lastmod>2022-11-30</lastmod>
+         <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>https://artentus.github.io/FactorioApiDoc/mod-api/</loc>
-     <lastmod>2018-09-08</lastmod>
-     <changefreq>daily</changefreq>
+         <loc>https://artentus.github.io/FactorioApiDoc/matchmaking-api/</loc>
+         <lastmod>2022-11-30</lastmod>
+         <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>https://artentus.github.io/FactorioApiDoc/mod-api/modlistpage/</loc>
-     <lastmod>2018-09-08</lastmod>
-     <changefreq>daily</changefreq>
+         <loc>https://artentus.github.io/FactorioApiDoc/matchmaking-api/appversion/</loc>
+         <lastmod>2022-11-30</lastmod>
+         <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>https://artentus.github.io/FactorioApiDoc/mod-api/pagination/</loc>
-     <lastmod>2018-09-08</lastmod>
-     <changefreq>daily</changefreq>
+         <loc>https://artentus.github.io/FactorioApiDoc/matchmaking-api/serverdescription/</loc>
+         <lastmod>2022-11-30</lastmod>
+         <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>https://artentus.github.io/FactorioApiDoc/mod-api/pagelinks/</loc>
-     <lastmod>2018-09-08</lastmod>
-     <changefreq>daily</changefreq>
+         <loc>https://artentus.github.io/FactorioApiDoc/mod-api/</loc>
+         <lastmod>2022-11-30</lastmod>
+         <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>https://artentus.github.io/FactorioApiDoc/mod-api/modinfo/</loc>
-     <lastmod>2018-09-08</lastmod>
-     <changefreq>daily</changefreq>
+         <loc>https://artentus.github.io/FactorioApiDoc/mod-api/infofile/</loc>
+         <lastmod>2022-11-30</lastmod>
+         <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>https://artentus.github.io/FactorioApiDoc/mod-api/modrelease/</loc>
-     <lastmod>2018-09-08</lastmod>
-     <changefreq>daily</changefreq>
+         <loc>https://artentus.github.io/FactorioApiDoc/mod-api/license/</loc>
+         <lastmod>2022-11-30</lastmod>
+         <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>https://artentus.github.io/FactorioApiDoc/mod-api/infofile/</loc>
-     <lastmod>2018-09-08</lastmod>
-     <changefreq>daily</changefreq>
+         <loc>https://artentus.github.io/FactorioApiDoc/mod-api/modinfo/</loc>
+         <lastmod>2022-11-30</lastmod>
+         <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>https://artentus.github.io/FactorioApiDoc/mod-api/license/</loc>
-     <lastmod>2018-09-08</lastmod>
-     <changefreq>daily</changefreq>
+         <loc>https://artentus.github.io/FactorioApiDoc/mod-api/modlistpage/</loc>
+         <lastmod>2022-11-30</lastmod>
+         <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>https://artentus.github.io/FactorioApiDoc/mod-api/tag/</loc>
-     <lastmod>2018-09-08</lastmod>
-     <changefreq>daily</changefreq>
+         <loc>https://artentus.github.io/FactorioApiDoc/mod-api/modrelease/</loc>
+         <lastmod>2022-11-30</lastmod>
+         <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>https://artentus.github.io/FactorioApiDoc/matchmaking-api/</loc>
-     <lastmod>2018-09-08</lastmod>
-     <changefreq>daily</changefreq>
+         <loc>https://artentus.github.io/FactorioApiDoc/mod-api/pagelinks/</loc>
+         <lastmod>2022-11-30</lastmod>
+         <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>https://artentus.github.io/FactorioApiDoc/matchmaking-api/serverdescription/</loc>
-     <lastmod>2018-09-08</lastmod>
-     <changefreq>daily</changefreq>
+         <loc>https://artentus.github.io/FactorioApiDoc/mod-api/pagination/</loc>
+         <lastmod>2022-11-30</lastmod>
+         <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>https://artentus.github.io/FactorioApiDoc/matchmaking-api/appversion/</loc>
-     <lastmod>2018-09-08</lastmod>
-     <changefreq>daily</changefreq>
+         <loc>https://artentus.github.io/FactorioApiDoc/mod-api/tag/</loc>
+         <lastmod>2022-11-30</lastmod>
+         <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>https://artentus.github.io/FactorioApiDoc/update-api/</loc>
-     <lastmod>2018-09-08</lastmod>
-     <changefreq>daily</changefreq>
+         <loc>https://artentus.github.io/FactorioApiDoc/update-api/</loc>
+         <lastmod>2022-11-30</lastmod>
+         <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>https://artentus.github.io/FactorioApiDoc/update-api/packagelist/</loc>
-     <lastmod>2018-09-08</lastmod>
-     <changefreq>daily</changefreq>
+         <loc>https://artentus.github.io/FactorioApiDoc/update-api/package/</loc>
+         <lastmod>2022-11-30</lastmod>
+         <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>https://artentus.github.io/FactorioApiDoc/update-api/package/</loc>
-     <lastmod>2018-09-08</lastmod>
-     <changefreq>daily</changefreq>
+         <loc>https://artentus.github.io/FactorioApiDoc/update-api/packagelist/</loc>
+         <lastmod>2022-11-30</lastmod>
+         <changefreq>daily</changefreq>
     </url>
 </urlset>
