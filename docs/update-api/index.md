@@ -7,7 +7,7 @@ The domain to access the API is `https://updater.factorio.com`, all of the follo
 
 ### Available Versions Endpoint
 
-To get a complete list of available packages you one can send a `GET` request to this endpoint located at `/get-available-versions`.
+To get a complete list of available packages one can send a `GET` request to this endpoint located at `/get-available-versions`.
 
 The following parameters must be specified:
 
